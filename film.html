@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="film.css">
+    <title>Movie</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="Img/imgMovie/logo.png" alt=""></a>
+        <div class="toggle"></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Trailer</a></li>
+            <li><a href="carto.html">Cartographie</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="rapport.html">Rapport</a></li>
+            <li><a href="biblio.html">Bibliographie</a></li>
+
+
+        </ul>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Eclatons <span>La Bulle</span> </h2>
+            <p>Explorez l'univers controversé des boissons gazeuses, omniprésentes et pourtant débattues. Un aperçu rapide mais révélateur qui éveillera votre curiosité.</p>
+            <a href="#" class="play" onclick="openTrailer(event);"><img src="Img/imgMovie/play.png" alt="">Watch Trailer</a>
+            <div class="slide"></div>
+            
+        </div>
+    </div>
+    <div class="trailer">
+    <iframe
+        id="ytVideo"
+        data-src="https://www.youtube.com/embed/ApJowiaSYgA"
+        title="La bonne santé"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+        </iframe>
+        <img src="Img/imgMovie/close.png" alt="" class="close" onclick="toggle();">
+    </div>
+
+    <script type="text/javascript">
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
